@@ -1,0 +1,565 @@
+$date
+	Mon Jul 13 22:41:24 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module async_fifo_TB $end
+$var wire 1 ! full $end
+$var wire 1 " empty $end
+$var wire 8 # data_out [7:0] $end
+$var parameter 32 $ DATA_WIDTH $end
+$var reg 8 % data_in [7:0] $end
+$var reg 1 & r_en $end
+$var reg 1 ' rclk $end
+$var reg 1 ( rrst_n $end
+$var reg 1 ) w_en $end
+$var reg 1 * wclk $end
+$var reg 8 + wdata [7:0] $end
+$var reg 1 , wrst_n $end
+$scope module as_fifo $end
+$var wire 8 - data_in [7:0] $end
+$var wire 1 ' read_clk $end
+$var wire 1 & read_en $end
+$var wire 1 ( read_rstn $end
+$var wire 1 * write_clk $end
+$var wire 1 ) write_en $end
+$var wire 1 , write_rstn $end
+$var wire 5 . writeptr_sync [4:0] $end
+$var wire 5 / writeptr_g [4:0] $end
+$var wire 5 0 writeptr_b [4:0] $end
+$var wire 5 1 readptr_sync [4:0] $end
+$var wire 5 2 readptr_g [4:0] $end
+$var wire 5 3 readptr_b [4:0] $end
+$var wire 1 ! full $end
+$var wire 1 " empty $end
+$var wire 8 4 data_out [7:0] $end
+$var parameter 32 5 FIFO_DEPTH $end
+$var parameter 32 6 FIFO_WIDTH $end
+$var parameter 32 7 PTR_WIDTH $end
+$scope module fifo_mem $end
+$var wire 8 8 data_in [7:0] $end
+$var wire 1 ' read_clk $end
+$var wire 1 & read_en $end
+$var wire 1 * write_clk $end
+$var wire 1 ) write_en $end
+$var wire 5 9 write_ptr_b [4:0] $end
+$var wire 5 : read_ptr_b [4:0] $end
+$var wire 1 ! full $end
+$var wire 1 " empty $end
+$var parameter 32 ; FIFO_DEPTH $end
+$var parameter 32 < FIFO_WIDTH $end
+$var parameter 32 = PTR_WIDTH $end
+$var reg 8 > data_out [7:0] $end
+$upscope $end
+$scope module read $end
+$var wire 1 ' clk $end
+$var wire 5 ? next_readptr_g [4:0] $end
+$var wire 1 & read_en $end
+$var wire 1 ( rstn $end
+$var wire 5 @ writeptr_g_sync [4:0] $end
+$var wire 5 A next_readptr_b [4:0] $end
+$var wire 1 " empty $end
+$var parameter 32 B PTR_WIDTH $end
+$var reg 5 C readptr_b [4:0] $end
+$var reg 5 D readptr_g [4:0] $end
+$upscope $end
+$scope module sync_read $end
+$var wire 1 ' clk $end
+$var wire 1 ( rstn $end
+$var wire 5 E ptr_in [4:0] $end
+$var parameter 32 F PTR_WIDTH $end
+$var reg 5 G Q_out [4:0] $end
+$var reg 5 H ptr_out [4:0] $end
+$upscope $end
+$scope module sync_write $end
+$var wire 1 * clk $end
+$var wire 5 I ptr_in [4:0] $end
+$var wire 1 , rstn $end
+$var parameter 32 J PTR_WIDTH $end
+$var reg 5 K Q_out [4:0] $end
+$var reg 5 L ptr_out [4:0] $end
+$upscope $end
+$scope module write $end
+$var wire 1 * clk $end
+$var wire 1 ! full $end
+$var wire 5 M next_writeptr_g [4:0] $end
+$var wire 5 N readptr_g_sync [4:0] $end
+$var wire 1 , rstn $end
+$var wire 1 ) write_en $end
+$var wire 5 O next_writeptr_b [4:0] $end
+$var parameter 32 P PTR_WIDTH $end
+$var reg 5 Q writeptr_b [4:0] $end
+$var reg 5 R writeptr_g [4:0] $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 S i [31:0] $end
+$upscope $end
+$scope begin $ivl_for_loop1 $end
+$var integer 32 T i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 P
+b100 J
+b100 F
+b100 B
+b100 =
+b1000 <
+b10000 ;
+b100 7
+b1000 6
+b10000 5
+b1000 $
+$end
+#0
+$dumpvars
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 I
+b0 H
+b0 G
+b0 E
+b0 D
+b0 C
+b0 A
+b0 @
+b0 ?
+bx >
+b0 :
+b0 9
+b0 8
+bx 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+0,
+bx +
+0*
+0)
+0(
+0'
+0&
+b0 %
+bx #
+1"
+0!
+$end
+#10000
+1*
+#20000
+0*
+#30000
+1*
+#35000
+1'
+#40000
+0*
+#50000
+1*
+#60000
+0*
+#70000
+1*
+0'
+#80000
+0*
+#90000
+1*
+#100000
+0*
+#105000
+1'
+#110000
+1*
+#120000
+0*
+#130000
+1*
+#140000
+0*
+0'
+#150000
+1*
+#160000
+0*
+#170000
+1*
+#175000
+1'
+#180000
+0*
+#190000
+1,
+1*
+#200000
+b1 M
+b1 O
+b100100 %
+b100100 -
+b100100 8
+1)
+0*
+#210000
+b11 M
+b1 /
+b1 E
+b1 R
+b10 O
+b1 0
+b1 9
+b1 Q
+b1 S
+1*
+0'
+#220000
+b1 M
+b1 O
+0)
+0*
+#230000
+b10 S
+1*
+#240000
+b11 M
+b10 O
+b10000001 %
+b10000001 -
+b10000001 8
+1)
+0*
+#245000
+1'
+#250000
+b10 M
+b11 /
+b11 E
+b11 R
+b11 O
+b10 0
+b10 9
+b10 Q
+b11 S
+1*
+#260000
+b11 M
+b10 O
+0)
+0*
+#270000
+b100 S
+1*
+#280000
+b10 M
+b11 O
+b1001 %
+b1001 -
+b1001 8
+1)
+0*
+0'
+#290000
+b110 M
+b10 /
+b10 E
+b10 R
+b100 O
+b11 0
+b11 9
+b11 Q
+b101 S
+1*
+#300000
+b10 M
+b11 O
+0)
+0*
+#310000
+b110 S
+1*
+#315000
+1'
+#320000
+b110 M
+b100 O
+b1100011 %
+b1100011 -
+b1100011 8
+1)
+0*
+#330000
+b111 M
+b110 /
+b110 E
+b110 R
+b101 O
+b100 0
+b100 9
+b100 Q
+b111 S
+1*
+#340000
+b110 M
+b100 O
+0)
+0*
+#350000
+b1000 S
+1*
+0'
+#360000
+b111 M
+b101 O
+b1101 %
+b1101 -
+b1101 8
+1)
+0*
+#370000
+b101 M
+b111 /
+b111 E
+b111 R
+b110 O
+b101 0
+b101 9
+b101 Q
+b1001 S
+1*
+#380000
+b111 M
+b101 O
+0)
+0*
+#385000
+1'
+#390000
+b1010 S
+1*
+#400000
+b101 M
+b110 O
+b10001101 %
+b10001101 -
+b10001101 8
+1)
+0*
+#410000
+b100 M
+b101 /
+b101 E
+b101 R
+b111 O
+b110 0
+b110 9
+b110 Q
+b1011 S
+1*
+#420000
+b101 M
+b110 O
+0)
+0*
+0'
+#430000
+b1100 S
+1*
+#440000
+b100 M
+b111 O
+b1100101 %
+b1100101 -
+b1100101 8
+1)
+0*
+#450000
+b1100 M
+b100 /
+b100 E
+b100 R
+b1000 O
+b111 0
+b111 9
+b111 Q
+b1101 S
+1*
+#455000
+1'
+#460000
+b100 M
+b111 O
+0)
+0*
+#470000
+b1110 S
+1*
+#480000
+b1100 M
+b1000 O
+b10010 %
+b10010 -
+b10010 8
+1)
+0*
+#490000
+b1101 M
+b1100 /
+b1100 E
+b1100 R
+b1001 O
+b1000 0
+b1000 9
+b1000 Q
+b1111 S
+1*
+0'
+#500000
+b1100 M
+b1000 O
+0)
+0*
+#510000
+b10000 S
+1*
+#520000
+b1101 M
+b1001 O
+b1 %
+b1 -
+b1 8
+1)
+0*
+#525000
+1'
+#530000
+b1111 M
+b1101 /
+b1101 E
+b1101 R
+b1010 O
+b1001 0
+b1001 9
+b1001 Q
+b10001 S
+1*
+#540000
+b1101 M
+b1001 O
+0)
+0*
+#550000
+b10010 S
+1*
+#560000
+b1111 M
+b1010 O
+b1101 %
+b1101 -
+b1101 8
+1)
+0*
+0'
+#570000
+b1110 M
+b1111 /
+b1111 E
+b1111 R
+b1011 O
+b1010 0
+b1010 9
+b1010 Q
+b10011 S
+1*
+#580000
+b1111 M
+b1010 O
+0)
+0*
+#590000
+b10100 S
+1*
+#595000
+1'
+#600000
+b1110 M
+b1011 O
+b1110110 %
+b1110110 -
+b1110110 8
+1)
+0*
+#610000
+b1010 M
+b1110 /
+b1110 E
+b1110 R
+b1100 O
+b1011 0
+b1011 9
+b1011 Q
+b10101 S
+1*
+#620000
+b1110 M
+b1011 O
+0)
+0*
+#630000
+b10110 S
+1*
+0'
+#640000
+b1010 M
+b1100 O
+b111101 %
+b111101 -
+b111101 8
+1)
+0*
+#650000
+b1011 M
+b1010 /
+b1010 E
+b1010 R
+b1101 O
+b1100 0
+b1100 9
+b1100 Q
+b10111 S
+1*
+#660000
+b1010 M
+b1100 O
+0)
+0*
+#665000
+1'
+#670000
+b11000 S
+1*
+#680000
+b1011 M
+b1101 O
+b11101101 %
+b11101101 -
+b11101101 8
+1)
+0*
+#690000
